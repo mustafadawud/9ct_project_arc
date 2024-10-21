@@ -10,6 +10,8 @@ func add_point():
 
 func become_host():
 	print("become host pressed")
-	
+	MultiplayerManger.become_host()
+	%multipolayerhd.hide()
 func join_as_player_2():
 	print("join as player 2")
+	MultiplayerManger.join_as_player_2()
