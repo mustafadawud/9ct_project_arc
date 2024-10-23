@@ -1,5 +1,2 @@
-CharacterBody2D
-Button
-VBoxContainer
-Panel
-Control
+Node2D
+MultiplayerSpawner
