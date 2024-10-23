@@ -1,0 +1,5 @@
+res://scenes/game.tscn
+res://scripts/multiplayer_manger.gd
+res://scripts/game_manager.gd
+res://scenes/Multiplayer_Player.tscn
+res://multiplayerplayer_controller.gd
