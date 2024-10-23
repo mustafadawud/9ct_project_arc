@@ -14,4 +14,5 @@ func become_host():
 	%multipolayerhd.hide()
 func join_as_player_2():
 	print("join as player 2")
+	%multipolayerhd.hide()
 	MultiplayerManger.join_as_player_2()
