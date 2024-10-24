@@ -1,5 +1,0 @@
-res://scenes/game.tscn
-res://scripts/game_manager.gd
-res://multiplayercontroller.gd
-res://scripts/multiplayer_manger.gd
-res://scenes/Multiplayer_Player.tscn
