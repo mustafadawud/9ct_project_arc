@@ -40,7 +40,7 @@ func _apply_movement_from_input(delta):
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction: -1, 0, 1
-	direction = Input.get_axis("move_left", "move_right")
+	direction = $InputSynchronizer.input_direction
 	
 	
 	# Apply movement
@@ -51,5 +51,6 @@ func _apply_movement_from_input(delta):
 
 	move_and_slide()
 
-
-	
+func _physics_process(delta):
+	if multiplayer.is_server():
+		_apply_movement_from_input(delta)
