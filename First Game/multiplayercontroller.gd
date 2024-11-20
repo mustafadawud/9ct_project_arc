@@ -7,6 +7,7 @@ const JUMP_VELOCITY = -400.0
 @export var player_id := 1:
 	set(id):
 		player_id = id
+		$InputSynchronizer.set_multiplayer_authority(id)
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 

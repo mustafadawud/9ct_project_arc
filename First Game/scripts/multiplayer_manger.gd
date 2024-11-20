@@ -30,7 +30,7 @@ func join_as_player_2():
 	print("Player 2 joining")
 	
 	var client_peer = ENetMultiplayerPeer.new()
-	client_peer.create_cilent(SERVER_IP, SERVER_PORT)
+	client_peer.create_client(SERVER_IP, SERVER_PORT)
 	
 	multiplayer.multiplayer_peer = client_peer
 	

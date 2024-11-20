@@ -1,8 +1,16 @@
-[gd_scene load_steps=28 format=3 uid="uid://by8nh7qkh5kur"]
+[gd_scene load_steps=29 format=3 uid="uid://by8nh7qkh5kur"]
 
 [ext_resource type="Script" path="res://multiplayercontroller.gd" id="1_7hpw4"]
 [ext_resource type="Texture2D" uid="uid://b8cmjj8vq3r8d" path="res://assets/sprites/knight.png" id="2_epn74"]
 [ext_resource type="Script" path="res://scripts/Multiplayer_synchronizer.gd" id="2_pst8w"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_pc4me"]
+properties/0/path = NodePath(".:player_id")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:position")
+properties/1/spawn = true
+properties/1/replication_mode = 1
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_15ij2"]
 properties/0/path = NodePath("InputSychronizer:input_direction")
@@ -179,6 +187,9 @@ animations = [{
 
 [node name="MultiplayerPlayer" type="CharacterBody2D"]
 script = ExtResource("1_7hpw4")
+
+[node name="PlayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_pc4me")
 
 [node name="InputSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_15ij2")
