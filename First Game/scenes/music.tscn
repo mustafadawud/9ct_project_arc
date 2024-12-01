@@ -6,4 +6,3 @@
 stream = ExtResource("1_q0dvm")
 volume_db = -80.0
 autoplay = true
-bus = &"Music"
