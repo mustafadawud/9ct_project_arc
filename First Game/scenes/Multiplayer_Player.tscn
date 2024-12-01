@@ -13,7 +13,7 @@ properties/1/spawn = true
 properties/1/replication_mode = 1
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_15ij2"]
-properties/0/path = NodePath("InputSychronizer:input_direction")
+properties/0/path = NodePath("MultiplayerSynchronizer:input_direction")
 properties/0/spawn = true
 properties/0/replication_mode = 1
 
@@ -191,7 +191,7 @@ script = ExtResource("1_7hpw4")
 [node name="PlayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_pc4me")
 
-[node name="InputSynchronizer" type="MultiplayerSynchronizer" parent="."]
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_15ij2")
 script = ExtResource("2_pst8w")
 
